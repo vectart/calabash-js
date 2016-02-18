@@ -1,0 +1,23 @@
+{
+  "name": "calabash-js",
+  "description": "Injectable script to perform Calabash queries",
+  "main": "src/calabash.js",
+  "license": "ISC",
+  "keywords": [
+    "calabash",
+    "testing",
+    "ios",
+    "android",
+    "automation"
+  ],
+  "homepage": "https://github.com/vectart/calabash-js",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "packages",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "calabash-js",
+  "version": "1.0.0",
+  "description": "Injectable script to perform Calabash queries",
+  "main": "src/calabash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vectart/calabash-js"
+  },
+  "keywords": [
+    "calabash",
+    "testing",
+    "ios",
+    "android",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vectart/calabash-js/issues"
+  },
+  "homepage": "https://github.com/vectart/calabash-js"
+}
