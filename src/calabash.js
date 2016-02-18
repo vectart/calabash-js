@@ -217,6 +217,29 @@
         window.__CALABASH_RESULTS__[e.data.__CALABASH_RESPONSE__] = e.data.result
       }
     }, false)
+
+    document.addEventListener('focus', function (e) {
+      var ghostClickProtector = document.getElementById('calabashGhostClickProtector')
+
+      if (!ghostClickProtector) {
+        ghostClickProtector = document.createElement('div')
+        ghostClickProtector.id = 'calabashGhostClickProtector'
+        ghostClickProtector.style.background = 'rgba(255,255,255,0)'
+        ghostClickProtector.style.position = 'fixed'
+        ghostClickProtector.style.left = '0px'
+        ghostClickProtector.style.top = '0px'
+        ghostClickProtector.style.width = '100%'
+        ghostClickProtector.style.height = '100%'
+        ghostClickProtector.style.zIndex = '25000'
+        document.body.appendChild(ghostClickProtector)
+      }
+
+      ghostClickProtector.style.display = 'block'
+
+      setTimeout(function () {
+        ghostClickProtector.style.display = 'none'
+      }, 300)
+    }, true)
   }
 
   var exp = '%@' /* dynamic */,
