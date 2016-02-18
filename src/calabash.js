@@ -20,7 +20,7 @@
 
   function boundingClientRect (object) {
     var rect = null,jsonRect = null
-    if (isHostMethod(object, 'getBoundingClientRect')) {
+    if (isHostMethod(object, 'getBoundingClientRect') && object.getClientRects().length) {
       rect = object.getBoundingClientRect(),
       jsonRect = {
         left: rect.left,
