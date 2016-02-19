@@ -174,6 +174,8 @@
       } else if (frameSelector != '' && !queryFrame && queryWindow) {
         var id = window.__CALABASH_RESULTS__.length
 
+        window.__CALABASH_RESULTS__[id] = undefined
+
         queryWindow.postMessage({
           __CALABASH_REQUEST__: id,
           exp: exp,
@@ -204,7 +206,7 @@
   }
 
   if (!window.__CALABASH_RESULTS__) {
-    window.__CALABASH_RESULTS__ = ['']
+    window.__CALABASH_RESULTS__ = [ undefined ]
     window.addEventListener('message', function (e) {
       console.warn('MESSAGE', e)
       if (e.data && e.data.__CALABASH_REQUEST__) {
