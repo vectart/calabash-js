@@ -16,7 +16,8 @@
   /*TEXT_NODE                      : */ 3: 'TEXT_NODE',
   /*DOCUMENT_NODE                  : */ 9: 'DOCUMENT_NODE'
   }
-  var UNESCAPED = String.fromCharCode(37) + '@'
+  var PERCENT = String.fromCharCode(37)
+  var UNESCAPED = PERCENT + '@'
 
   function boundingClientRect (object) {
     var rect = null,jsonRect = null
@@ -230,8 +231,8 @@
         ghostClickProtector.style.position = 'fixed'
         ghostClickProtector.style.left = '0px'
         ghostClickProtector.style.top = '0px'
-        ghostClickProtector.style.width = '100%'
-        ghostClickProtector.style.height = '100%'
+        ghostClickProtector.style.width = '100' + PERCENT
+        ghostClickProtector.style.height = '100' + PERCENT
         ghostClickProtector.style.zIndex = '25000'
         document.body.appendChild(ghostClickProtector)
       }
